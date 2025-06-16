@@ -1,0 +1,123 @@
+/* Corpo com layout horizontal */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #2e2828;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+}
+
+/* Menu lateral fixo */
+.menu-lateral {
+    width: 250px;
+    background-color: #1f1a1a;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+/* Conteúdo principal posicionado ao lado do menu */
+.main-content {
+    margin-left: 0px; /* mesma largura do menu */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+}
+.main-content h1{
+    margin-left: 0px;
+}
+.main-content img{
+    margin-left: 90px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #e0e0e0;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+header img.logo {
+    width: 30px;
+    height: 30px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Container centralizado */
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.animal-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    padding: 10px 20px;
+    align-self: flex-end;
+}
+
+footer button {
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .menu-lateral {
+        width: 60px;
+    }
+
+    .main-content {
+        margin-left: 60px;
+    }
+
+    .txt-link {
+        display: none;
+    }
+}
